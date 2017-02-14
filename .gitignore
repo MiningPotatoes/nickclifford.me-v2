@@ -1,6 +1,6 @@
 .sass-cache/*
 public/stylesheets/*
-!public/stylesheets/sass/*
+!public/stylesheets/sass/
 
 *.gem
 *.rbc
