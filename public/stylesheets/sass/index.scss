@@ -1,8 +1,13 @@
+a {
+  // we don't want any underlines on links
+  text-decoration: none;
+}
+
 body {
   margin: 0;
 
   .bg {
-    background-image: url(https://nickclifford.me/assets/background/circle.png);
+    background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -32,6 +37,41 @@ body {
       p {
         margin-top: 0;
         text-align: center;
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.5em;
+      font-weight: 300;
+
+      margin-bottom: 0;
+    }
+
+    #projects {
+      display: flex;
+      justify-content: space-around;
+
+      .proj {
+        h2 {
+          font-weight: normal;
+          font-size: 1.75em;
+
+          margin-bottom: 1.5vh;
+        }
+
+        img {
+          height: 300px;
+          width: 450px;
+        }
+
+        p {
+          width: 450px;
+        }
       }
     }
   }
