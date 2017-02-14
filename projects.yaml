@@ -1,0 +1,17 @@
+%YAML 1.1
+---
+-
+  name: MyMICDS
+  link: test
+  image: test
+  desc: A portal for organizing your student life at MICDS.
+-
+  name: Pear Tutoring
+  link: test
+  image: test
+  desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
+-
+  name: Node GitHub Deployer
+  link: test
+  image: test
+  desc: ayy lmao
