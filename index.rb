@@ -2,9 +2,11 @@ require 'haml'
 require 'yaml'
 require 'sass/plugin/rack'
 require 'sinatra/base'
+require 'sinatra/reloader'
 
 class NickCliffordV2 < Sinatra::Base
   configure do
+    register Sinatra::Reloader
     use Sass::Plugin::Rack
   end
 
