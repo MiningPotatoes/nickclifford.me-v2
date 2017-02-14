@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+
+  .bg {
+    background-image: url(https://nickclifford.me/assets/background/circle.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-around;
+
+    .title {
+      background-color: #FFF;
+
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 4em;
+        font-weight: 100;
+
+        margin: 1vw;
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-top: 0;
+        text-align: center;
+      }
+    }
+  }
+}
