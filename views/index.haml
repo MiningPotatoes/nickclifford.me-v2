@@ -1,12 +1,12 @@
-.bg
-  .flex
-    .title
+#bg
+  #flex
+    #title
       %h1 Nick Clifford
       %p Back-end developer, webmaster, sysadmin.
 
-.content
+#projects
   %h2 Projects
-  #projects
+  #projects-list
     - projects.each do |project|
       .proj
         %h2= project['name']

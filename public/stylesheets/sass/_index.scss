@@ -2,42 +2,40 @@ body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
 
-  .bg {
+  #bg {
     background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
     height: 100%;
-    width: 100%;
-  }
 
-  .flex {
-    display: flex;
-    height: inherit;
-    align-items: center;
-    justify-content: space-around;
+    #flex {
+      display: flex;
+      height: inherit;
+      align-items: center;
+      justify-content: space-around;
 
-    .title {
-      background-color: #FFF;
+      #title {
+        background-color: #FFF;
 
-      h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 4em;
-        font-weight: 100;
+        h1 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 4em;
+          font-weight: 100;
 
-        margin: 1vw;
-        margin-bottom: 0;
-      }
+          margin: 1vw;
+          margin-bottom: 0;
+        }
 
-      p {
-        margin-top: 0;
-        text-align: center;
+        p {
+          margin-top: 0;
+          text-align: center;
+        }
       }
     }
   }
 
-  .content {
+  #projects {
     text-align: center;
 
     h2 {
@@ -48,7 +46,7 @@ body {
       margin-bottom: 0;
     }
 
-    #projects {
+    #projects-list {
       display: flex;
       justify-content: space-around;
 
