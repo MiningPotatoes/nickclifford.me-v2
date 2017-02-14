@@ -9,7 +9,7 @@
   #projects
     - projects.each do |project|
       .proj
-        %h2
-          %a{href: project['link']}= project['name']
-        %img{src: project['image']}
+        %h2= project['name']
+        %a{href: project['link']}
+          %img{src: project['image']}
         %p= project['desc']
