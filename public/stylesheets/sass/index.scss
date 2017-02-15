@@ -4,6 +4,16 @@ body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
 
+  text-align: center;
+
+  .section-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5em;
+    font-weight: 300;
+
+    margin-bottom: 0;
+  }
+
   #header {
     background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
     background-repeat: no-repeat;
@@ -25,29 +35,27 @@ body {
           font-size: 4em;
           font-weight: 100;
 
-          margin: 1vw;
+          margin: 1vh;
           margin-bottom: 0;
         }
 
-        p {
-          margin-top: 0;
-          text-align: center;
+        #social-icons {
+          display: flex;
+          justify-content: space-around;
+
+          margin-bottom: 1vh;
         }
       }
     }
   }
 
-  #projects {
-    text-align: center;
-
-    h2 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 3.5em;
-      font-weight: 300;
-
-      margin-bottom: 0;
+  #about {
+    .section-header {
+      margin-top: 2vh;
     }
+  }
 
+  #projects {
     #projects-list {
       display: flex;
       justify-content: space-around;

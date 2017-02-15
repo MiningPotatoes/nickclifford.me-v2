@@ -21,6 +21,10 @@ class NickCliffordV2 < Sinatra::Base
 
   get '/' do
     partial :index, 'Home', {
+      icons: {
+        'github' => 'https://github.com/MiningPotatoes',
+        'envelope' => 'mailto:nick@nickclifford.me'
+      },
       projects: YAML.load_file(File.expand_path('../projects.yaml', __FILE__))
     }
   end
