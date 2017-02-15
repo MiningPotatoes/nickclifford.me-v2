@@ -1,8 +1,10 @@
+@import 'global';
+
 body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
 
-  #bg {
+  #header {
     background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -50,7 +52,7 @@ body {
       display: flex;
       justify-content: space-around;
 
-      .proj {
+      .project {
         h2 {
           font-weight: normal;
           font-size: 1.75em;

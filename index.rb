@@ -13,6 +13,7 @@ class NickCliffordV2 < Sinatra::Base
   helpers do
     def partial(id, title, variables = {})
       haml(id, locals: {
+        id: id,
         title: title
       }.merge(variables))
     end

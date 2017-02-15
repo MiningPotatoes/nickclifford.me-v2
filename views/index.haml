@@ -1,4 +1,4 @@
-#bg
+#header
   #flex
     #title
       %h1 Nick Clifford
@@ -8,7 +8,7 @@
   %h2 Projects
   #projects-list
     - projects.each do |project|
-      .proj
+      .project
         %h2= project['name']
         %a{href: project['link']}
           %img{src: project['image']}
