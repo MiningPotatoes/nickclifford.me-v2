@@ -11,6 +11,7 @@ body {
     font-size: 3.5em;
     font-weight: 300;
 
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -32,7 +33,7 @@ body {
 
         h1 {
           font-family: 'Roboto', sans-serif;
-          font-size: 4em;
+          font-size: 5em;
           font-weight: 100;
 
           margin: 1vh;
@@ -49,32 +50,43 @@ body {
     }
   }
 
-  #about {
-    .section-header {
-      margin-top: 2vh;
+  #content {
+    padding: 2vh 5vw;
+    padding-bottom: 0;
+
+    #about {
+      .section-header {
+        font-size: 4.25em;
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 1.25em;
+      }
     }
-  }
 
-  #projects {
-    #projects-list {
-      display: flex;
-      justify-content: space-around;
+    #projects {
+      #projects-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
 
-      .project {
-        h2 {
-          font-weight: normal;
-          font-size: 1.75em;
+        .project {
+          h2 {
+            font-weight: normal;
+            font-size: 1.75em;
 
-          margin-bottom: 1.5vh;
-        }
+            margin-bottom: 1.5vh;
+          }
 
-        img {
-          height: 300px;
-          width: 450px;
-        }
+          img {
+            height: 300px;
+            width: 450px;
+          }
 
-        p {
-          width: 450px;
+          p {
+            width: 450px;
+          }
         }
       }
     }
