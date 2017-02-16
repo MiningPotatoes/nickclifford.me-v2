@@ -15,78 +15,88 @@ body {
     margin-bottom: 0;
   }
 
-  #header {
+  // creates a full-size flexbox with centered content 
+  > header,
+  > div {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+  }
+
+  header {
     background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
 
-    #flex {
-      display: flex;
-      height: inherit;
-      align-items: center;
-      justify-content: space-around;
+    #title {
+      background-color: #FFF;
 
-      #title {
-        background-color: #FFF;
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 5em;
+        font-weight: 100;
 
-        h1 {
-          font-family: 'Roboto', sans-serif;
-          font-size: 5em;
-          font-weight: 100;
+        margin: 1vh;
+        margin-bottom: 0;
+      }
 
-          margin: 1vh;
-          margin-bottom: 0;
-        }
+      #social-icons {
+        display: flex;
+        justify-content: space-around;
 
-        #social-icons {
-          display: flex;
-          justify-content: space-around;
-
-          margin-bottom: 1vh;
-        }
+        margin-bottom: 1vh;
       }
     }
   }
 
-  #content {
+  // preferably, this block would not exist and the `padding` would go to the `> div` section up near the header
+  // however, i would have to use `@extend > header` to keep it DRY, and you can't extend nested selectors
+  // so this has to be explicitly declared in another block
+  > div {
     padding: 2vh 5vw;
-    padding-bottom: 0;
+  }
 
-    #about {
-      .section-header {
-        font-size: 4.25em;
-      }
-
-      p {
-        margin-top: 0;
-        font-size: 1.25em;
-      }
+  #about {
+    .section-header {
+      font-size: 4.25em;
     }
 
-    #projects {
-      #projects-list {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
+    p {
+      margin-top: 0;
+      font-size: 1.25em;
+    }
+  }
 
-        .project {
-          h2 {
-            font-weight: normal;
-            font-size: 1.75em;
+  #projects {
+    flex-flow: row wrap;
+    height: min-content;
 
-            margin-bottom: 1.5vh;
-          }
+    #projects-list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
 
-          img {
-            height: 300px;
-            width: 450px;
-          }
+      .project {
+        margin: 0.5vh 0.5vw;
 
-          p {
-            width: 450px;
-          }
+        h2 {
+          font-weight: normal;
+          font-size: 1.75em;
+
+          margin: 0;
+          margin-bottom: 1.5vh;
+        }
+
+        img {
+          height: 300px;
+          width: 450px;
+        }
+
+        p {
+          width: 450px;
         }
       }
     }

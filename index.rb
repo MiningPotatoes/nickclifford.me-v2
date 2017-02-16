@@ -12,10 +12,23 @@ class NickCliffordV2 < Sinatra::Base
 
   helpers do
     def partial(id, title, variables = {})
-      haml(id, locals: {
-        id: id,
-        title: title
-      }.merge(variables))
+      layout_vars = {id: id, title: title}
+
+      layout_vars[:script] =
+        if File.exist?(File.expand_path("../public/javascripts/#{id}.js", __FILE__))
+          "<script src='/javascripts/#{id}.js'></script>"
+        else
+          nil
+        end
+
+      layout_vars[:stylesheet] =
+        if File.exist?(File.expand_path("../public/stylesheets/sass/#{id}.scss", __FILE__))
+          "<link href='/stylesheets/#{id}.css' rel='stylesheet'>"
+        else
+          nil
+        end
+
+      haml(id, locals: layout_vars.merge(variables))
     end
   end
 
