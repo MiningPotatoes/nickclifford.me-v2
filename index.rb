@@ -7,7 +7,10 @@ require 'sinatra/reloader'
 class NickCliffordV2 < Sinatra::Base
   configure do
     register Sinatra::Reloader
+
+    require_relative 'lib/babel'
     use Sass::Plugin::Rack
+    use Babel
   end
 
   helpers do
