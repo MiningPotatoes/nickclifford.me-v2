@@ -9,6 +9,9 @@ class NickCliffordV2 < Sinatra::Base
     register Sinatra::Reloader
 
     require_relative 'lib/babel'
+
+    Sass::Plugin.options[:sourcemap] = :none
+    Sass::Plugin.options[:unix_newlines] = true
     use Sass::Plugin::Rack
     use Babel
   end
