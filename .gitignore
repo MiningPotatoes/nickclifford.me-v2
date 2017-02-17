@@ -2,6 +2,10 @@
 public/stylesheets/*
 !public/stylesheets/sass/
 
+public/javascripts/*
+!public/javascripts/es6/
+!public/javascripts/polyfills/
+
 *.gem
 *.rbc
 /.config

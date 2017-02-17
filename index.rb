@@ -18,7 +18,7 @@ class NickCliffordV2 < Sinatra::Base
       layout_vars = {id: id, title: title}
 
       layout_vars[:script] =
-        if File.exist?(File.expand_path("../public/javascripts/#{id}.js", __FILE__))
+        if File.exist?(File.expand_path("../public/javascripts/es6/#{id}.es6", __FILE__))
           "<script src='/javascripts/#{id}.js'></script>"
         else
           nil

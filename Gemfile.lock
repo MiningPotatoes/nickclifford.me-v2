@@ -1,7 +1,18 @@
+GIT
+  remote: git://github.com/MiningPotatoes/ruby-babel-transpiler.git
+  revision: b2bb1cbfaa4c202f377b331996870ae23c2e3fd1
+  branch: patch-1
+  specs:
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    babel-source (5.8.35)
     backports (3.6.8)
+    execjs (2.7.0)
     haml (4.0.7)
       tilt
     multi_json (1.12.1)
@@ -28,6 +39,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  babel-transpiler!
   haml
   sass
   sinatra
