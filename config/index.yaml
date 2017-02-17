@@ -1,0 +1,33 @@
+%YAML 1.1
+---
+icons:
+  github: https://github.com/MiningPotatoes
+  envelope: mailto:nick@nickclifford.me
+
+projects:
+  -
+    name: MyMICDS
+    link: https://mymicds.net/
+    image: https://michaelgira.me/img/projects/MyMICDS.png
+    desc: A portal for organizing your student life at MICDS.
+  -
+    name: Pear Tutoring
+    link: https://peartutoring.net/
+    image: https://michaelgira.me/img/projects/pearerino.png
+    desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
+  -
+    name: Node-GitHub-Deployer
+    link: https://github.com/MiningPotatoes/Node-GitHub-Deployer
+    image: test
+    desc: ayy lmao
+
+skills:
+  -
+    name: Ruby
+    link: https://www.ruby-lang.org/en/
+    image: https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg
+
+  -
+    name: Node.js
+    link: https://nodejs.org/en/
+    image: https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg

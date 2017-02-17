@@ -7,8 +7,23 @@ body {
   text-align: center;
 
   // scroll-snap-type: mandatory;
+  
 
-  .section-header {
+  .flex-list {
+    height: min-content;
+
+    > div {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      > div {
+        margin: 0.5vh 0.5vw;
+      }
+    }
+  }
+
+  .section-heading {
     font-family: 'Roboto', sans-serif;
     font-size: 3.5em;
     font-weight: 300;
@@ -62,7 +77,7 @@ body {
   }
 
   #about {
-    .section-header {
+    .section-heading {
       font-size: 4.25em;
     }
 
@@ -72,17 +87,20 @@ body {
     }
   }
 
+  #skills {
+    #skills-list {
+      .skill {
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+    }
+  }
+
   #projects {
-    height: min-content;
-
     #projects-list {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-
       .project {
-        margin: 0.5vh 0.5vw;
-
         h2 {
           font-weight: normal;
           font-size: 1.75em;

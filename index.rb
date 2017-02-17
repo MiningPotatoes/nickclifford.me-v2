@@ -17,34 +17,36 @@ class NickCliffordV2 < Sinatra::Base
   end
 
   helpers do
-    def partial(id, title, variables = {})
-      layout_vars = {id: id, title: title}
+    def partial(id, title)
+      locals = {id: id, title: title}
 
-      layout_vars[:script] =
-        if File.exist?(File.expand_path("../public/javascripts/es6/#{id}.es6", __FILE__))
+      locals[:script] =
+        if File.exist?(File.expand_path("./public/javascripts/es6/#{id}.es6", __dir__))
           "<script src='/javascripts/#{id}.js'></script>"
         else
           nil
         end
 
-      layout_vars[:stylesheet] =
-        if File.exist?(File.expand_path("../public/stylesheets/sass/#{id}.scss", __FILE__))
+      locals[:stylesheet] =
+        if File.exist?(File.expand_path("./public/stylesheets/sass/#{id}.scss", __dir__))
           "<link href='/stylesheets/#{id}.css' rel='stylesheet'>"
         else
           nil
         end
 
-      haml(id, locals: layout_vars.merge(variables))
+      config_path = File.expand_path("./config/#{id}.yaml", __dir__)
+      config = 
+        if File.exist?(config_path)
+          YAML.load_file(config_path)
+        else
+          {}
+        end
+
+      haml(id, locals: locals.merge(config))
     end
   end
 
   get '/' do
-    partial :index, 'Home', {
-      icons: {
-        github: 'https://github.com/MiningPotatoes',
-        envelope: 'mailto:nick@nickclifford.me'
-      },
-      projects: YAML.load_file(File.expand_path('../projects.yaml', __FILE__))
-    }
+    partial :index, 'Home'
   end
 end
