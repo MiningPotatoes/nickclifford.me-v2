@@ -20,7 +20,7 @@ body {
 
   > div {
     @include full-flex;
-    padding: 2vh 5vw;
+    padding: 2% 5%;
   }
 }
 
@@ -33,7 +33,7 @@ body {
     justify-content: space-around;
 
     > div {
-      margin: 0.5vh 0.5vw;
+      margin: 0.5%;
     }
   }
 }
@@ -50,9 +50,9 @@ body {
 header {
   @include full-flex;
   background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
 
   #title {
     background-color: #FFF;
@@ -62,7 +62,7 @@ header {
       font-size: 5em;
       font-weight: 100;
 
-      margin: 1vh;
+      margin: 1%;
       margin-bottom: 0;
     }
 
@@ -70,7 +70,7 @@ header {
       display: flex;
       justify-content: space-around;
 
-      margin-bottom: 1vh;
+      margin-bottom: 1%;
     }
   }
 }
@@ -99,7 +99,7 @@ header {
     font-size: 1.75em;
 
     margin: 0;
-    margin-bottom: 1.5vh;
+    margin-bottom: 1.5%;
   }
 
   img {
