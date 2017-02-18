@@ -17,7 +17,7 @@ class NickCliffordV2 < Sinatra::Base
   end
 
   helpers do
-    def partial(id, title)
+    def partial(id, title, externals = {})
       locals = {id: id, title: title}
 
       locals[:script] =
@@ -42,7 +42,7 @@ class NickCliffordV2 < Sinatra::Base
           {}
         end
 
-      haml(id, locals: locals.merge(config))
+      haml(id, locals: locals.merge(config).merge(externals))
     end
   end
 
