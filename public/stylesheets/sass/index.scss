@@ -8,11 +8,13 @@
   flex-flow: column wrap;
 }
 
+* {
+  text-align: center;
+}
+
 body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
-
-  text-align: center;
 
   /* scroll-snap-type: mandatory; */
 
