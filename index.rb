@@ -23,15 +23,11 @@ class NickCliffordV2 < Sinatra::Base
       locals[:script] =
         if File.exist?(File.expand_path("./public/javascripts/es6/#{id}.es6", __dir__))
           "<script src='/javascripts/#{id}.js'></script>"
-        else
-          nil
         end
 
       locals[:stylesheet] =
         if File.exist?(File.expand_path("./public/stylesheets/sass/#{id}.scss", __dir__))
           "<link href='/stylesheets/#{id}.css' rel='stylesheet'>"
-        else
-          nil
         end
 
       config_path = File.expand_path("./config/#{id}.yaml", __dir__)
