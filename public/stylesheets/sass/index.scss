@@ -9,29 +9,6 @@ body {
   // scroll-snap-type: mandatory;
   
 
-  .flex-list {
-    height: min-content;
-
-    > div {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-
-      > div {
-        margin: 0.5vh 0.5vw;
-      }
-    }
-  }
-
-  .section-heading {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3.5em;
-    font-weight: 300;
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   // creates a full-size flexbox with centered content 
   > header,
   > div {
@@ -42,82 +19,97 @@ body {
     flex-flow: column wrap;
   }
 
-  header {
-    background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
-    #title {
-      background-color: #FFF;
-
-      h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 5em;
-        font-weight: 100;
-
-        margin: 1vh;
-        margin-bottom: 0;
-      }
-
-      #social-icons {
-        display: flex;
-        justify-content: space-around;
-
-        margin-bottom: 1vh;
-      }
-    }
-  }
-
-  // preferably, this block would not exist and the `padding` would go to the `> div` section up near the header
+  // preferably, this block would not exist and the `padding` would go to the `> div` section
   // however, i would have to use `@extend > header` to keep it DRY, and you can't extend nested selectors
   // so this has to be explicitly declared in another block
   > div {
     padding: 2vh 5vw;
   }
+}
 
-  #about {
-    .section-heading {
-      font-size: 4.25em;
-    }
+.flex-list {
+  height: min-content;
 
-    p {
-      margin-top: 0;
-      font-size: 1.25em;
-    }
-  }
+  > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 
-  #skills {
-    #skills-list {
-      .skill {
-        img {
-          height: 200px;
-          width: 200px;
-        }
-      }
+    > div {
+      margin: 0.5vh 0.5vw;
     }
   }
+}
 
-  #projects {
-    #projects-list {
-      .project {
-        h2 {
-          font-weight: normal;
-          font-size: 1.75em;
+.section-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5em;
+  font-weight: 300;
 
-          margin: 0;
-          margin-bottom: 1.5vh;
-        }
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-        img {
-          height: 300px;
-          width: 450px;
-        }
+header {
+  background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
-        p {
-          width: 450px;
-        }
-      }
+  #title {
+    background-color: #FFF;
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 5em;
+      font-weight: 100;
+
+      margin: 1vh;
+      margin-bottom: 0;
     }
+
+    #social-icons {
+      display: flex;
+      justify-content: space-around;
+
+      margin-bottom: 1vh;
+    }
+  }
+}
+
+#about {
+  .section-heading {
+    font-size: 4.25em;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+}
+
+.skill {
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.project {
+  h2 {
+    font-weight: normal;
+    font-size: 1.75em;
+
+    margin: 0;
+    margin-bottom: 1.5vh;
+  }
+
+  img {
+    height: 300px;
+    width: 450px;
+  }
+
+  p {
+    width: 450px;
   }
 }

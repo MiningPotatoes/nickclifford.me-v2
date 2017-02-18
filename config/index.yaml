@@ -31,3 +31,8 @@ skills:
     name: Node.js
     link: https://nodejs.org/en/
     image: https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg
+
+  -
+    name: PHP
+    link: http://www.php.net/
+    image: https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg
