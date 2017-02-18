@@ -1,28 +1,23 @@
 @import 'global';
 
+@mixin full-flex {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
 body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
 
   text-align: center;
 
-  // scroll-snap-type: mandatory;
-  
+  /* scroll-snap-type: mandatory; */
 
-  // creates a full-size flexbox with centered content 
-  > header,
   > div {
-    display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column wrap;
-  }
-
-  // preferably, this block would not exist and the `padding` would go to the `> div` section
-  // however, i would have to use `@extend > header` to keep it DRY, and you can't extend nested selectors
-  // so this has to be explicitly declared in another block
-  > div {
+    @include full-flex;
     padding: 2vh 5vw;
   }
 }
@@ -51,6 +46,7 @@ body {
 }
 
 header {
+  @include full-flex;
   background-image: url(http://kingofwallpapers.com/blue-and-black-backgrounds/blue-and-black-backgrounds-003.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
