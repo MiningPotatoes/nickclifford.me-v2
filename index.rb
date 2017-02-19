@@ -10,7 +10,11 @@ class NickCliffordV2 < Sinatra::Base
 
     require_relative 'lib/babel'
 
-    Sass::Plugin.options[:sourcemap] = :none
+    if settings.environment == 'production'
+      Sass::Plugin.options[:sourcemap] = :none
+      Babel.sourcemaps = false
+    end
+
     Sass::Plugin.options[:unix_newlines] = true
     use Sass::Plugin::Rack
     use Babel
