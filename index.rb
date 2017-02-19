@@ -34,9 +34,7 @@ class NickCliffordV2 < Sinatra::Base
         end
 
       config_path = File.expand_path("./config/#{id}.yaml", __dir__)
-      if File.exist?(config_path)
-        locals.merge!(YAML.load_file(config_path))
-      end
+      locals.merge!(YAML.load_file(config_path)) if File.exist?(config_path)
 
       haml(id, locals: locals)
     end
