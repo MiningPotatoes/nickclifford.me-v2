@@ -17,28 +17,24 @@ class NickCliffordV2 < Sinatra::Base
   end
 
   helpers do
-    def partial(id, title, externals = {})
-      locals = {id: id, title: title}
-
+    def partial(id, title, locals = {})
+      locals[:id] = id
+      locals[:title] = title
       locals[:script] =
         if File.exist?(File.expand_path("./public/javascripts/es6/#{id}.es6", __dir__))
           "<script src='/javascripts/#{id}.js'></script>"
         end
-
       locals[:stylesheet] =
         if File.exist?(File.expand_path("./public/stylesheets/sass/#{id}.scss", __dir__))
           "<link href='/stylesheets/#{id}.css' rel='stylesheet'>"
         end
 
       config_path = File.expand_path("./config/#{id}.yaml", __dir__)
-      config = 
-        if File.exist?(config_path)
-          YAML.load_file(config_path)
-        else
-          {}
-        end
+      if File.exist?(config_path)
+        locals.merge!(YAML.load_file(config_path))
+      end
 
-      haml(id, locals: locals.merge(config).merge(externals))
+      haml(id, locals: locals)
     end
   end
 
