@@ -20,12 +20,10 @@ class NickCliffordV2
 
         flag = 'w'
         flag << 'b' if RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/ # write LF instead of CRLF on Windows
-
-        babel = ::Babel::Transpiler.transform(File.read(filename), {
-          'comments' => false
-        })
         
-        File.open(transpile_name, flag) {|f| f.puts(babel['code'])}
+        File.open(transpile_name, flag) do |f|
+          f.puts(::Babel::Transpiler.transform(File.read(filename), {'comments' => false})['code'])
+        end
       end
 
       @app.call(env)
