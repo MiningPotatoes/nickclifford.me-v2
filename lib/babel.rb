@@ -24,7 +24,7 @@ class NickCliffordV2
     end
 
     def call(env)
-      Dir.glob(File.expand_path('../public/javascripts/es6/*.es6', __dir__)) do |filename|
+      Dir.glob(File.expand_path('../src/es6/*.es6', __dir__)) do |filename|
         transpile_name = File.expand_path("../public/javascripts/#{File.basename(filename, '.*')}.js", __dir__)
 
         # do not retranspile if there have been no modifications to the original ES6 file since transpilation

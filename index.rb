@@ -15,6 +15,7 @@ class NickCliffordV2 < Sinatra::Base
       Babel.sourcemaps = false
     end
 
+    Sass::Plugin.options[:template_location] = './src/sass'
     Sass::Plugin.options[:unix_newlines] = true
     use Sass::Plugin::Rack
     use Babel
@@ -25,11 +26,11 @@ class NickCliffordV2 < Sinatra::Base
       locals[:id] = id
       locals[:title] = title
       locals[:script] =
-        if File.exist?(File.expand_path("./public/javascripts/es6/#{id}.es6", __dir__))
+        if File.exist?(File.expand_path("./src/es6/#{id}.es6", __dir__))
           "<script src='/javascripts/#{id}.js'></script>"
         end
       locals[:stylesheet] =
-        if File.exist?(File.expand_path("./public/stylesheets/sass/#{id}.scss", __dir__))
+        if File.exist?(File.expand_path("./src/sass/#{id}.scss", __dir__))
           "<link href='/stylesheets/#{id}.css' rel='stylesheet'>"
         end
 
