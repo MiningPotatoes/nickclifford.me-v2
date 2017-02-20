@@ -32,7 +32,7 @@ class NickCliffordV2
 
         babel = ::Babel::Transpiler.transform(File.read(filename), {
           'comments' => false,
-          'sourceFileName' => 'es6/' + File.basename(filename),
+          'sourceFileName' => '../../src/es6/' + File.basename(filename),
           'sourceMaps' => true,
           'sourceMapTarget' => File.basename(transpile_name)
         })
