@@ -10,10 +10,10 @@ class NickCliffordV2 < Sinatra::Base
 
     require_relative 'lib/babel'
 
-    if settings.environment == 'production'
+    # if settings.environment == 'production'
       Sass::Plugin.options[:sourcemap] = :none
       Babel.sourcemaps = false
-    end
+    # end
 
     Sass::Plugin.options[:template_location] = './src/sass'
     Sass::Plugin.options[:unix_newlines] = true
