@@ -24,17 +24,21 @@ body {
   // this is so that the background image reaches all sides of the view
   margin: 0;
 
-  /* scroll-snap-type: mandatory; */
+  /*
+  scroll-snap-type: mandatory;
+
+  > * {
+    scroll-snap-coordinate: 0 0;
+  }
+  */
 
   > div {
     @include full-flex;
-    padding: 2% 5%;
+    padding: 0 5%;
   }
 }
 
 .flex-list {
-  height: min-content;
-
   > div {
     display: flex;
     flex-flow: row wrap;
