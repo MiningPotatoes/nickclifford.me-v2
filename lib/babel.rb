@@ -20,7 +20,7 @@ class NickCliffordV2
 
     def initialize(app)
       @app = app
-      @@sourcemaps ||= true
+      @@sourcemaps = true unless defined? @@sourcemaps
     end
 
     def call(env)

@@ -7,6 +7,7 @@ require 'sinatra/reloader'
 class NickCliffordV2 < Sinatra::Base
   configure do
     register Sinatra::Reloader
+    enable :reloader
 
     require_relative 'lib/babel'
 
