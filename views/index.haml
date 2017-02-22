@@ -13,11 +13,11 @@
 
 #skills.flex-list
   %h2.section-heading Skills and Experience
-  #skills-list
+  #skills-list.flex-list__container
     - skills.each do |skill|
-      .skill
+      .skill.flex-list__item
         %a{href: skill['link']}
-          %img{src: skill['image']}
+          %i{class: "devicon-#{skill['devicon']} colored"}
         %h2= skill['name']
 
 #lorem
@@ -27,9 +27,9 @@
 
 #projects.flex-list
   %h2.section-heading Projects
-  #projects-list
+  #projects-list.flex-list__container
     - projects.each do |project|
-      .project
+      .project.flex-list__item
         %h2= project['name']
         %a{href: project['link']}
           %img{src: project['image']}

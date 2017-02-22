@@ -31,9 +31,11 @@ body {
     scroll-snap-coordinate: 0 0;
   }
   */
+
+  background-color: $base-color;
  
   > *:nth-child(even) {
-    background-color: #FAFAFA;
+    background-color: $secondary-color;
   }
 
   > div {
@@ -43,13 +45,16 @@ body {
 }
 
 .flex-list {
-  > div {
+  .flex-list__container {
+    width: 65%;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 
-    > div {
-      margin: 0.5%;
+    .flex-list__item {
+      display: inherit;
+      flex-direction: column;
     }
   }
 }
@@ -106,9 +111,8 @@ header {
 }
 
 .skill {
-  img {
-    height: 200px;
-    width: 200px;
+  i {
+    font-size: 8em;
   }
 }
 
@@ -122,12 +126,7 @@ header {
   }
 
   img {
-    height: 300px;
-    width: 450px;
-  }
-
-  p {
-    width: 450px;
+    width: 50%;
   }
 }
 

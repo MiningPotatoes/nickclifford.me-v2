@@ -25,14 +25,49 @@ skills:
   -
     name: Ruby
     link: https://www.ruby-lang.org/en/
-    image: https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg
+    devicon: ruby-plain
+
+  -
+    name: Rails
+    link: http://rubyonrails.org/
+    devicon: rails-plain
 
   -
     name: Node.js
     link: https://nodejs.org/en/
-    image: https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg
+    devicon: nodejs-plain
 
   -
     name: PHP
     link: http://www.php.net/
-    image: https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg
+    devicon: php-plain
+
+  -
+    name: MySQL
+    link: https://www.mysql.com/
+    devicon: mysql-plain
+
+  -
+    name: Linux
+    link: https://www.linuxfoundation.org/
+    devicon: linux-plain
+
+  -
+    name: Ubuntu
+    link: https://www.ubuntu.com/
+    devicon: ubuntu-plain
+
+  -
+    name: Git
+    link: https://git-scm.com/
+    devicon: git-plain
+
+  -
+    name: Apache
+    link: http://httpd.apache.org/
+    devicon: apache-plain
+
+  -
+    name: Nginx
+    link: http://nginx.org/
+    devicon: nginx-original
