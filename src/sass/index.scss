@@ -31,6 +31,10 @@ body {
     scroll-snap-coordinate: 0 0;
   }
   */
+ 
+  > *:nth-child(even) {
+    background-color: #FAFAFA;
+  }
 
   > div {
     @include full-flex;
@@ -125,4 +129,8 @@ header {
   p {
     width: 450px;
   }
+}
+
+footer {
+  margin: 1%;
 }

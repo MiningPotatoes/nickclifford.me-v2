@@ -18,7 +18,7 @@ projects:
   -
     name: Node-GitHub-Deployer
     link: https://github.com/MiningPotatoes/Node-GitHub-Deployer
-    image: test
+    image: https://upload.wikimedia.org/wikipedia/commons/6/66/SMPTE_Color_Bars.svg
     desc: ayy lmao
 
 skills:
