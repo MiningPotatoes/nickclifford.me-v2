@@ -9,4 +9,5 @@
   %body
     = yield
     = script
-    %script{src: '/javascripts/polyfills/scrollsnap.js'}
+    - Dir.glob(File.expand_path('./public/javascripts/polyfills/*.js')) do |polyfill|
+      %script{src: '/javascripts/polyfills/' + File.basename(polyfill)}
