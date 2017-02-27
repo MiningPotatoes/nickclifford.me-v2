@@ -8,12 +8,12 @@ projects:
   -
     name: MyMICDS
     link: https://mymicds.net/
-    image: https://michaelgira.me/img/projects/MyMICDS.png
+    image: /images/MyMICDS.png
     desc: A portal for organizing your student life at MICDS.
   -
     name: Pear Tutoring
     link: https://peartutoring.net/
-    image: https://michaelgira.me/img/projects/pearerino.png
+    image: /images/PearTutoring.png
     desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
   # -
   #   name: Node-GitHub-Deployer
