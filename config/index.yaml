@@ -15,11 +15,11 @@ projects:
     link: https://peartutoring.net/
     image: https://michaelgira.me/img/projects/pearerino.png
     desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
-  -
-    name: Node-GitHub-Deployer
-    link: https://github.com/MiningPotatoes/Node-GitHub-Deployer
-    image: https://upload.wikimedia.org/wikipedia/commons/6/66/SMPTE_Color_Bars.svg
-    desc: ayy lmao
+  # -
+  #   name: Node-GitHub-Deployer
+  #   link: https://github.com/MiningPotatoes/Node-GitHub-Deployer
+  #   image: https://upload.wikimedia.org/wikipedia/commons/6/66/SMPTE_Color_Bars.svg
+  #   desc: ayy lmao
 
 skills:
   -
