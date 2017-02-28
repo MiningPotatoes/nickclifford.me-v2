@@ -27,5 +27,5 @@ document.addEventListener('scroll', (event) => {
     event.stopPropagation();
 
     // TODO: scrollIntoView() stuff
-    console.log(event);
+    // console.log(event);
 });
