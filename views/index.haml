@@ -1,28 +1,28 @@
 %header
-  #title
+  .title
     %h1 Nick Clifford
-    #social-icons
+    .social-icons
       - icons.each do |icon, link|
         %a{href: link, target: '_blank'}
           %i{class: "fa fa-3x fa-#{icon}"}
 
-#about
+.about
   %h2.section-heading Hello!
   %p |
     I'm Nick Clifford, and I'm a back-end web developer, sysadmin, and webmaster.
 
-#skills.flex-list
+.skills.flex-list
   %h2.section-heading Skills and Experience
-  #skills-list.flex-list__container
+  .skills-list.flex-list__container
     - skills.each do |skill|
       .skill.flex-list__item
         %a{href: skill['link'], target: '_blank'}
           %i{class: "devicon-#{skill['devicon']} colored"}
         %h2= skill['name']
 
-#projects.flex-list
+.projects.flex-list
   %h2.section-heading Projects
-  #projects-list.flex-list__container
+  .projects-list.flex-list__container
     - projects.each do |project|
       .project.flex-list__item
         %h2= project['name']

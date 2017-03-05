@@ -75,7 +75,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 
-  #title {
+  .title {
     background-color: #FFF;
 
     h1 {
@@ -90,7 +90,7 @@ header {
       white-space: nowrap;
     }
 
-    #social-icons {
+    .social-icons {
       display: flex;
       justify-content: space-around;
 
@@ -99,7 +99,7 @@ header {
   }
 }
 
-#about {
+.about {
   .section-heading {
     font-size: 4.25em;
   }
