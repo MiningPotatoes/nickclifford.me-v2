@@ -1,31 +1,12 @@
-let contentMap = {};
+let contentList = Array.from(document.body.children).filter(e => e.tagName.toLowerCase() !== 'SCRIPT');
 
-for(let elem of document.body.children) {
-    let tagName = elem.tagName.toLowerCase();
-    switch(tagName) {
-        case 'SCRIPT':
-            // don't add script tags
-            break;
-        case 'HEADER':
-        case 'FOOTER':
-            contentMap[tagName] = elem;
-            break;
-        default:
-            contentMap[elem.id] = elem;
-            break;
-    }
-}
+// index of current content focus (initializes to header)
+let focusIndex = 0;
 
-// current content focus (initializes to header)
-// this should not be directly modified
-// instead, use changeFocus() so we can have special behavior
-let focus = contentMap.header;
-
-function changeFocus(elem) {}
-
-document.addEventListener('scroll', (event) => {
+document.addEventListener('scroll', event => {
     event.stopPropagation();
 
-    // TODO: scrollIntoView() stuff
+    // TODO
+    // contentList[focusIndex].scrollIntoView({behavior: 'smooth', block: 'start'});
     // console.log(event);
 });
