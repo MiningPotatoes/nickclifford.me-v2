@@ -6,3 +6,7 @@ gem 'haml'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'
+
+group :test do
+  gem 'rspec'
+end
