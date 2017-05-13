@@ -6,6 +6,10 @@ rvm:
   - ruby-head
 bundler_args: --with test
 
+addons:
+  ssh_known_hosts:
+    - 45.56.70.141
+
 after_success:
   - openssl aes-256-cbc -K $encrypted_1a864abad9ab_key -iv $encrypted_1a864abad9ab_iv -in deploy_key.pem.enc -out deploy_key.pem -d
   - eval "$(ssh-agent -s)" # start the ssh agent
