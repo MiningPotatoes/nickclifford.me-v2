@@ -27,10 +27,10 @@ skills:
     link: https://www.ruby-lang.org/en/
     devicon: ruby-plain
 
-  -
-    name: Rails
-    link: http://rubyonrails.org/
-    devicon: rails-plain
+  # -
+  #  name: Rails
+  #  link: http://rubyonrails.org/
+  #  devicon: rails-plain
 
   -
     name: Node.js
