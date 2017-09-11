@@ -1,0 +1,139 @@
+@import 'global';
+
+@mixin full-flex {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+* {
+  text-align: center;
+}
+
+// this is because the HTML5 declaration requires all ancestor elements
+// to have height: 100%; in order for other elements to have it
+html {
+  height: 100%;
+}
+
+body {
+  @extend html;
+
+  // this is so that the background image reaches all sides of the view
+  margin: 0;
+
+  /*
+  scroll-snap-type: mandatory;
+
+  > * {
+    scroll-snap-coordinate: 0 0;
+  }
+  */
+
+  background-color: $base-color;
+ 
+  > *:nth-child(even) {
+    background-color: $secondary-color;
+  }
+
+  > div {
+    @include full-flex;
+    padding: 0 5%;
+  }
+}
+
+.flex-list {
+  .flex-list__container {
+    width: 65%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .flex-list__item {
+      display: inherit;
+      flex-direction: column;
+    }
+  }
+}
+
+.section-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5em;
+  font-weight: 300;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+header {
+  @include full-flex;
+  background-image: url(/images/background.svg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .title {
+    background-color: #FFF;
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 5em;
+      font-weight: 100;
+
+      margin: 0;
+      padding: 1%;
+      padding-bottom: 0;
+
+      white-space: nowrap;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+
+      margin-bottom: 1%;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.about {
+  .section-heading {
+    font-size: 4.25em;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+}
+
+.skill {
+  i {
+    font-size: 8em;
+  }
+}
+
+.project {
+  h2 {
+    font-weight: normal;
+    font-size: 1.75em;
+
+    margin: 0;
+    margin-bottom: 1.5%;
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
+footer {
+  margin: 1%;
+}

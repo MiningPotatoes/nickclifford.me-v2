@@ -1,0 +1,11 @@
+$base-color: white;
+$secondary-color: darken($base-color, 2%);
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  // color: inherit;
+  text-decoration: none;
+}

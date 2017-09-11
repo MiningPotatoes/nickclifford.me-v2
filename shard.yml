@@ -1,0 +1,14 @@
+name: nickclifford.me-v2
+version: 2.0.0
+crystal: 0.23.1
+
+author:
+  - Nick Clifford <nick@nickclifford.me>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  sass:
+    github: straight-shoota/sass.cr
+  
+license: MIT
