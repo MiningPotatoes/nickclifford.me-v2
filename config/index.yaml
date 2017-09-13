@@ -17,7 +17,7 @@ projects:
     desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
   -
     name: Ohm
-    link: https://github.com/MiningPotatoes/Ohm
+    link: https://github.com/nickbclifford/Ohm
     image: /images/Ohm.png
     desc: An extremely concise programming language designed for <a href="https://en.wikipedia.org/wiki/Code_golf">code golf</a>.
 

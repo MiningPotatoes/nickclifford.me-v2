@@ -10,5 +10,7 @@ dependencies:
     github: kemalcr/kemal
   sass:
     github: straight-shoota/sass.cr
-  
+  slang:
+    github: jeromegn/slang
+
 license: MIT

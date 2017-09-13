@@ -16,3 +16,7 @@ shards:
     github: straight-shoota/sass.cr
     commit: 2c6ca376f7d9e3b2ea57b856ecd828009283284d
 
+  slang:
+    github: jeromegn/slang
+    version: 1.6.1
+
