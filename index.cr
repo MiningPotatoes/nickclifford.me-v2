@@ -9,7 +9,7 @@ macro partial(id, title)
 
   id = {{id.stringify}}
   title = {{title}}
-  stylesheet = %{<link href="/css/{{id.id}}.css" rel="stylesheet">} if p(File.exists?("./scss/{{id.id}}.scss"))
+  stylesheet = %{<link href="/css/{{id.id}}.css" rel="stylesheet">} if File.exists?("./scss/{{id.id}}.scss")
 
   # TODO: fix Slang to allow unescaped interpolation
   HTML.unescape(render "./views/{{id.id}}.slang", "./views/layout.slang")

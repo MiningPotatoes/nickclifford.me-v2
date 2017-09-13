@@ -2,6 +2,9 @@
 public/css/*
 public/js/*
 
+# Built binary
+index
+
 lib/
 .crystal/
 .shards/
