@@ -19,4 +19,4 @@ get "/" do
   partial :index, "Home"
 end
 
-Kemal.run
+Kemal.run 3692
