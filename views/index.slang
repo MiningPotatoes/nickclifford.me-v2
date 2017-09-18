@@ -1,0 +1,35 @@
+header
+  .title
+    h1 Nick Clifford
+    .social-icons
+      - config["icons"].each do |icon, link|
+        a href=link target="_blank"
+          i class="fa fa-3x fa-#{icon}"
+
+.about
+  h2.section-heading Hello!
+  p
+    | I'm Nick Clifford, and I'm a back-end web developer, sysadmin, and webmaster.
+
+.skills.flex-list
+  h2.section-heading Skills and Experience
+  .skills-list.flex-list__container
+    - config["skills"].each do |skill|
+      .skill.flex-list__item
+        a href=skill[%{link}] target="_blank"
+          i class="devicon-#{skill["devicon"]} colored"
+        h2= skill["name"]
+
+.projects.flex-list
+  h2.section-heading Projects
+  .projects-list.flex-list__container
+    - config["projects"].each do |project|
+      .project.flex-list__item
+        h2= project["name"]
+        a href=project[%{link}] target="_blank"
+          img src=project[%{image}]
+        p= project["desc"]
+
+footer
+  a href="https://github.com/nickbclifford/nickclifford.me-v2/blob/master/LICENSE" target="_blank"
+    p Copyright &copy; 2017 Nick Clifford.
