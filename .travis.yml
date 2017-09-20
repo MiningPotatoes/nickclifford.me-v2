@@ -5,7 +5,7 @@ script:
   - crystal deps
   - sudo make -C lib/sass install-libsass
   - sudo ldconfig
-  - crystal spec
+  - KEMAL_ENV=test crystal spec
 
 after_success: .travis/deploy.sh
 before_install:
