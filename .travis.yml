@@ -1,15 +1,14 @@
 language: crystal
 sudo: required
 
-script:
+before_install:
+- openssl aes-256-cbc -K $encrypted_d1bd2aab0391_key -iv $encrypted_d1bd2aab0391_iv
+  -in .travis/id_rsa.enc -out .travis/id_rsa -d
+install:
   - crystal deps
   - cd lib/sass
   - sudo make install-libsass
   - cd ../..
   - sudo ldconfig
-  - KEMAL_ENV=test crystal spec
-
+script: KEMAL_ENV=test crystal spec
 after_success: .travis/deploy.sh
-before_install:
-- openssl aes-256-cbc -K $encrypted_d1bd2aab0391_key -iv $encrypted_d1bd2aab0391_iv
-  -in .travis/id_rsa.enc -out .travis/id_rsa -d
