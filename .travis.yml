@@ -3,7 +3,9 @@ sudo: required
 
 script:
   - crystal deps
-  - sudo make -C lib/sass install-libsass
+  - cd lib/sass
+  - sudo make install-libsass
+  - cd ../..
   - sudo ldconfig
   - KEMAL_ENV=test crystal spec
 
