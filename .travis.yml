@@ -1,0 +1,13 @@
+language: crystal
+sudo: required
+
+script:
+  - crystal deps
+  - sudo make -C lib/sass install-libsass
+  - sudo ldconfig
+  - crystal spec
+
+after_success: .travis/deploy.sh
+before_install:
+- openssl aes-256-cbc -K $encrypted_d1bd2aab0391_key -iv $encrypted_d1bd2aab0391_iv
+  -in .travis/id_rsa.enc -out .travis/id_rsa -d
