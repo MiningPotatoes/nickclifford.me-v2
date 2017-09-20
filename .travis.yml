@@ -1,10 +1,16 @@
 language: crystal
-#sudo: required
+
+env:
+  global:
+    LOCAL_LD_PATH: ${TRAVIS_BUILD_DIR}/dynlib
+
+cache:
+  directories:
+    - ${LOCAL_LD_PATH}
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_d1bd2aab0391_key -iv $encrypted_d1bd2aab0391_iv -in .travis/id_rsa.enc -out .travis/id_rsa -d
   - crystal deps
   - make -C lib/sass dep
-  #- sudo ldconfig
-script: KEMAL_ENV=test crystal spec
+script: LIBRARY_PATH="$LOCAL_LD_PATH/lib" LD_LIBRARY_PATH="$LOCAL_LD_PATH/lib" KEMAL_ENV=test crystal spec
 after_success: .travis/deploy.sh
