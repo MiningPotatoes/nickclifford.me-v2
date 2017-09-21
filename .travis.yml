@@ -1,5 +1,7 @@
 language: crystal
 
+addons:
+  ssh_known_hosts: ${IP}:${PORT}
 env:
   global:
     LOCAL_LD_PATH: ${TRAVIS_BUILD_DIR}/dynlib
