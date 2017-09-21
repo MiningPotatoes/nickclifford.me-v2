@@ -3,7 +3,7 @@
 eval "$(ssh-agent -s)"
 chmod 600 .travis/id_rsa
 if [ -z 'ssh-keygen -F $IP' ]; then
-  ssh-keyscan -H "[$IP]:$PORT" >> ~/.ssh/known_hosts
+  ssh-keyscan $IP:$PORT >> ~/.ssh/known_hosts
 fi
 
 git config --global push.default matching
