@@ -20,3 +20,7 @@ shards:
     github: jeromegn/slang
     version: 1.6.1
 
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    version: 0.4.0
+

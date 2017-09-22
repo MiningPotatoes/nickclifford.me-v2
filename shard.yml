@@ -12,5 +12,7 @@ dependencies:
     github: straight-shoota/sass.cr
   slang:
     github: jeromegn/slang
+  spec-kemal:
+    github: kemalcr/spec-kemal
 
 license: MIT

@@ -1,0 +1,15 @@
+language: crystal
+
+addons:
+  ssh_known_hosts:
+    secure: "N5advjWLixzexNYI144cvxLWg91dYkWaZEL+Hi6W8El0d0saSwa/oPPxNB0/N9Wa8h7BMDWdalWzJz8pb34VdtAIvcpc00y0eIRYPdRsCFfrSKgAVx48QFcRZZL+nrhwcwHN9RyMboKCi1GIZDIxWULzX2fcW7MEsKDV3n9xc0joCTE3tkBg5ivCwINamRIiCBYGvC8OGnTbb4/Cn5Pat4VzVKTMdNqsJUrzpLP/HFHLY3A1QEp+aaiGUNRoA1Da21QcMXCOKAbab3eDg2/Rl3QAah8VbNo8ogmwX0brzMJWtEqp6eA4zYnU4DW/UKCh2RcBTqfCxCaDzYCPuoJUrqUgtPKwEFcYPVtRhCiDqpkvBDcdrdIG90wr8sJ5s8jlu8fDz8oCu/tQLhzOhYFmQ2BJqVxCtf984aBk+dARnLI4dWDsNlY+pWdLo5i9rjOVgaJb0PNLEQR1spoKBviaG0AADsbEN+u7038Fi/JA5gNhr4VOsGsYSLYnX4OOJP5IlbhoRQw0C6GxoN55mttiGS9N99EZPx6DGtAcC4R+RRSr6CVbLGUVQdTROPYX9i8+iRa4B/SIBzZ5lMr/motpinHSYVBoHrKgohI4l71+uChfHlSogqBK4IFLqlWEHcjp7EDKut4jqXNrJNUQXa57QVFTtUmTxkEZN44jEedINCo="
+env:
+  global:
+    LOCAL_LD_PATH: ${TRAVIS_BUILD_DIR}/dynlib
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_d1bd2aab0391_key -iv $encrypted_d1bd2aab0391_iv -in .travis/id_rsa.enc -out .travis/id_rsa -d
+  - crystal deps
+  - make -C lib/sass dep
+script: LIBRARY_PATH="$LOCAL_LD_PATH/lib" LD_LIBRARY_PATH="$LOCAL_LD_PATH/lib" KEMAL_ENV=test crystal spec
+after_success: .travis/deploy.sh
