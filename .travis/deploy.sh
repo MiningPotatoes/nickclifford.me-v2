@@ -11,5 +11,5 @@ git push deploy master
 ssh apps@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR
   crystal build --release --no-debug index.cr -o index.new
-  mv index.new index # Do not trigger `index` file watching until compilation is done
+  mv index.new index # Do not trigger "index" file watching until compilation is done
 EOF
