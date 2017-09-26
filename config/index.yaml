@@ -38,14 +38,29 @@ skills:
     devicon: nodejs-plain
 
   -
+    name: TypeScript
+    link: https://www.typescriptlang.org/
+    devicon: typescript-plain
+
+  -
     name: PHP
     link: http://www.php.net/
     devicon: php-plain
 
   -
+    name: Travis CI
+    link: https://travis-ci.org/
+    devicon: travis-plain
+
+  -
     name: MySQL
     link: https://www.mysql.com/
     devicon: mysql-plain
+
+  -
+    name: MongoDB
+    link: https://www.mongodb.com/
+    devicon: mongodb-plain
 
   -
     name: Linux
