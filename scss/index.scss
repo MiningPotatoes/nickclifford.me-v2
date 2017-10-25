@@ -33,7 +33,7 @@ body {
   */
 
   background-color: $base-color;
- 
+
   > *:nth-child(even) {
     background-color: $secondary-color;
   }
@@ -70,7 +70,7 @@ body {
 
 header {
   @include full-flex;
-  background-image: url(/images/background.svg);
+  background-image: url('/images/background.svg');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -78,15 +78,15 @@ header {
   .title {
     background-color: #FFF;
 
+    padding: 0.5%;
+    padding-top: 0;
+
     h1 {
       font-family: 'Roboto', sans-serif;
       font-size: 5em;
       font-weight: 100;
 
       margin: 0;
-      padding: 1%;
-      padding-bottom: 0;
-
       white-space: nowrap;
     }
 
@@ -110,7 +110,7 @@ header {
 
   p {
     margin-top: 0;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 
