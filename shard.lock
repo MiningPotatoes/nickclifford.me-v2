@@ -23,4 +23,3 @@ shards:
   spec-kemal:
     github: kemalcr/spec-kemal
     version: 0.4.0
-
