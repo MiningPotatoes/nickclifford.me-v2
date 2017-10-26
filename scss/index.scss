@@ -79,7 +79,7 @@ header {
     background-color: #FFF;
 
     padding: 0.5%;
-    padding-top: 0;
+    // padding-top: 0;
 
     h1 {
       font-family: 'Roboto', sans-serif;
@@ -95,6 +95,10 @@ header {
       justify-content: space-around;
 
       margin-bottom: 1%;
+
+      img {
+        width: 3em;
+      }
 
       a {
         color: inherit;

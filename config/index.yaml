@@ -1,9 +1,23 @@
 %YAML 1.1
 ---
 icons:
-  github: https://github.com/nickbclifford
-  envelope: mailto:nick@nickclifford.me
-  key: http://pgp.mit.edu/pks/lookup?op=get&search=0xB8D82410BCA2807D
+  fa:
+    github:
+      link: https://github.com/nickbclifford
+      title: GitHub
+    envelope:
+      link: mailto:nick@nickclifford.me
+      title: Contact Me
+    key:
+      link: http://pgp.mit.edu/pks/lookup?op=get&search=0xB8D82410BCA2807D
+      title: PGP Public Key
+  cc:
+    ETH:
+      link: https://etherscan.io/address/nickclifford.eth
+      title: Ethereum Address
+    LTC:
+      link: https://live.blockcypher.com/ltc/address/La412SP8DBU4RJBji4hKyzWFFxCiCmMpGZ
+      title: Litecoin Address
 
 projects:
   -

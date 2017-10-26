@@ -2,9 +2,15 @@ header
   .title
     h1 Nick Clifford
     .social-icons
-      - config["icons"].each do |icon, link|
-        a href=link target="_blank"
-          i class="fa fa-3x fa-#{icon}"
+      - config["icons"].each do |type, icons|
+        - icons.each do |icon, settings|
+          a href=settings[%{link}] target="_blank" title=settings[%{title}]
+            - case type
+            - when "fa"
+              i class="fa fa-3x fa-#{icon}"
+            - when "cc"
+              img src="/images/#{icon}-alt.svg"
+
 
 .about
   h2.section-heading Hello!
