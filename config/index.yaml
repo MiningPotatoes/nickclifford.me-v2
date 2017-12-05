@@ -18,6 +18,9 @@ icons:
     LTC:
       link: https://live.blockcypher.com/ltc/address/La412SP8DBU4RJBji4hKyzWFFxCiCmMpGZ
       title: Litecoin Address
+    ZEC:
+      link: https://explorer.zcha.in/accounts/t1XhTL1yRrVzkt4Am1CB2FntN2yigoKD5Ty
+      title: Zcash Address
     BTC:
       link: https://blockchain.info/address/19k7KRhfjfRwDnndKytBRtk5vV33zWXQrA
       title: Bitcoin Address

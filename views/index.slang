@@ -9,7 +9,7 @@ header
             - when "fa"
               i class="fa fa-3x fa-#{icon}"
             - when "cc"
-              img src="/images/#{icon}-alt.svg"
+              i class="cc #{icon}-alt"
 
 
 .about

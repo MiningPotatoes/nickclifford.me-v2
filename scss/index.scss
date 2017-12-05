@@ -93,11 +93,15 @@ header {
     .social-icons {
       display: flex;
       justify-content: space-around;
+      align-items: center;
 
-      margin-bottom: 1%;
+      // evil negative margin hack
+      margin-top: -2.5%;
+      margin-bottom: 2.5%;
 
-      img {
-        width: 3em;
+      .cc {
+        font-size: 3em;
+        line-height: 100%;
       }
 
       a {
