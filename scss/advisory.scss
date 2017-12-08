@@ -1,0 +1,13 @@
+@import 'global';
+
+body {
+  background-color: $base-color;
+
+  @include full-flex;
+}
+
+.main {
+  h1 {
+    font-size: 5em;
+  }
+}
