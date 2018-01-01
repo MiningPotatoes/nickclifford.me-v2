@@ -12,16 +12,16 @@ icons:
       link: http://pgp.mit.edu/pks/lookup?op=get&search=0xB8D82410BCA2807D
       title: PGP Public Key
   cc:
-    ETH:
+    ETH-alt:
       link: https://etherscan.io/address/nickclifford.eth
       title: Ethereum Address (preferred)
-    LTC:
+    LTC-alt:
       link: https://live.blockcypher.com/ltc/address/La412SP8DBU4RJBji4hKyzWFFxCiCmMpGZ
       title: Litecoin Address
-    # ZEC:
-    #   link: https://explorer.zcha.in/accounts/t1XhTL1yRrVzkt4Am1CB2FntN2yigoKD5Ty
-    #   title: Zcash Address
-    BTC:
+    XMR:
+      link: monero:48EqZsAL9jS7veP3YbnTvFGZhJ8VsziRjVuedUcnZuf3PrRSwBsSZEyBeXMsSN3cmoiRSqcCDmB9bPcEQmWFa1uHAGQPkDf
+      title: Monero Address
+    BTC-alt:
       link: https://blockchain.info/address/19k7KRhfjfRwDnndKytBRtk5vV33zWXQrA
       title: Bitcoin Address
 

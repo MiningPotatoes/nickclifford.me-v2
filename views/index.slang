@@ -9,7 +9,7 @@ header
             - when "fa"
               i class="fa fa-3x fa-#{icon}"
             - when "cc"
-              i class="cc #{icon}-alt"
+              i class="cc #{icon}"
 
 
 .about
@@ -38,4 +38,4 @@ header
 
 / Inline markup isn't great in Slang, so we'll just use HTML
 footer
-  | Copyright <a href="https://github.com/nickbclifford/nickclifford.me-v2/blob/master/LICENSE" target="_blank">&copy; 2017</a> Nick Clifford. Powered by <a href="https://crystal-lang.org/" target="_blank">Crystal</a> and <a href="http://kemalcr.com/" target="_blank">Kemal.</a>
+  | Copyright <a href="https://github.com/nickbclifford/nickclifford.me-v2/blob/master/LICENSE" target="_blank">&copy; #{Time.now.year}</a> Nick Clifford. Powered by <a href="https://crystal-lang.org/" target="_blank">Crystal</a> and <a href="http://kemalcr.com/" target="_blank">Kemal.</a>

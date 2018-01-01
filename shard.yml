@@ -1,6 +1,6 @@
 name: nickclifford.me-v2
 version: 2.0.0
-crystal: 0.23.1
+crystal: 0.24.1
 
 author:
   - Nick Clifford <nick@nickclifford.me>
@@ -12,6 +12,8 @@ dependencies:
     github: straight-shoota/sass.cr
   slang:
     github: jeromegn/slang
+    # TODO fix once Slang gets a version bump
+    commit: 33d5c2c2075460094784904e7ecdd3cd21c8d36e
   spec-kemal:
     github: kemalcr/spec-kemal
 

@@ -2,7 +2,7 @@ version: 1.0
 shards:
   kemal:
     github: kemalcr/kemal
-    version: 0.21.0
+    version: 0.22.0
 
   kilt:
     github: jeromegn/kilt
@@ -14,12 +14,13 @@ shards:
 
   sass:
     github: straight-shoota/sass.cr
-    commit: 2c6ca376f7d9e3b2ea57b856ecd828009283284d
+    commit: 346f904ac1579b2b7652325f288c650974b39bab
 
   slang:
     github: jeromegn/slang
-    version: 1.6.1
+    commit: 33d5c2c2075460094784904e7ecdd3cd21c8d36e
 
   spec-kemal:
     github: kemalcr/spec-kemal
     version: 0.4.0
+
