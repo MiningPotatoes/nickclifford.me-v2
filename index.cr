@@ -28,25 +28,18 @@ get "/" do
 end
 
 get "/advisory" do
-  advisees = %w(Ben Eli Gini Hadley Nick Palmer Sameer Sloane Skyler)
+  advisees = %w(Hanna Ben Eli Gini Hadley Nick Palmer Sameer Sloane Skyler)
 
-  rotation = JSON.parse(HTTP::Client.post("https://api.mymicds.net/portal/day-rotation").body)
-  err = rotation["error"].as_s?
-
-  days = rotation["days"].as_h?
-
-  unless days.nil?
-    days = days.each_with_object({} of Time => Int32) do |(year, v0), memo|
-      v0.as(Hash(String, JSON::Type)).each do |(month, v1)|
-        v1.as(Hash(String, JSON::Type)).each do |(day, v2)|
-          cycle_day = JSON::Any.new(v2).as_i
-          memo[Time.new(year.to_i, month.to_i, day.to_i)] = cycle_day unless cycle_day == 1 || cycle_day == 4
-        end
+  days = JSON.parse(File.read("./public/misc/days.json")).as_h.each_with_object({} of Time => Int32) do |(year, v0), memo|
+    v0.as(Hash(String, JSON::Type)).each do |(month, v1)|
+      v1.as(Hash(String, JSON::Type)).each do |(day, v2)|
+        cycle_day = JSON::Any.new(v2).as_i
+        memo[Time.new(year.to_i, month.to_i, day.to_i)] = cycle_day unless cycle_day == 1 || cycle_day == 4
       end
     end
-
-    day_pairs = advisees.cycle.zip(days.each)
   end
+
+  day_pairs = days.each.zip(advisees.cycle).reject {|(d, _)| d[0] < Time.now.at_end_of_day}
 
   partial :advisory, "Advisory Snack"
 end
