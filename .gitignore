@@ -2,8 +2,6 @@
 public/css/*
 public/js/*
 
-public/misc/
-
 # Built binary
 index
 
