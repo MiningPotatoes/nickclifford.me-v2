@@ -2,6 +2,7 @@ require "http/client"
 require "json"
 require "kemal"
 require "kilt/slang"
+require "sqlite3"
 require "yaml"
 require "./handlers/sass_handler"
 
@@ -25,6 +26,13 @@ end
 
 get "/" do
   partial :index, "Home"
+end
+
+get "/cycling" do
+  DB.open "sqlite3://./misc.db" do |db|
+    cyclists = db.query_all("select name, falls from cycling", as: {name: String, falls: Int32})
+    partial :cycling, "Cycling"
+  end
 end
 
 Kemal.run 3692

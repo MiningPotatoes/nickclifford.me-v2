@@ -2,6 +2,9 @@
 public/css/*
 public/js/*
 
+# Miscellaneous SQLite database
+misc.db
+
 # Built binary
 index
 
