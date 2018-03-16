@@ -30,7 +30,7 @@ end
 
 get "/cycling" do
   DB.open "sqlite3://./misc.db" do |db|
-    cyclists = db.query_all("select name, falls from cycling", as: {name: String, falls: Int32})
+    cyclists = db.query_all("select name, falls from cycling order by falls", as: {name: String, falls: Int32})
     partial :cycling, "Cycling"
   end
 end
