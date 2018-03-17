@@ -15,7 +15,7 @@ header
 .about
   h2.section-heading Hello!
   p
-    | I'm Nick Clifford, and I'm a back-end web developer, sysadmin, and webmaster.
+    | I'm Nick Clifford, and I'm a back-end software developer, sysadmin, and webmaster.
 
 .skills.flex-list
   h2.section-heading Skills and Experience
