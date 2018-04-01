@@ -69,6 +69,11 @@ skills:
     devicon: php-plain
 
   -
+    name: C#
+    link: https://docs.microsoft.com/en-us/dotnet/csharp/
+    devicon: csharp-plain
+
+  -
     name: Travis CI
     link: https://travis-ci.org/
     devicon: travis-plain
