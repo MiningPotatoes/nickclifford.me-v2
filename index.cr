@@ -21,7 +21,7 @@ macro partial(id, title)
   stylesheet = %{<link href="/css/{{id.id}}.css" rel="stylesheet">} if File.exists?("./scss/{{id.id}}.scss")
 
   # TODO: fix Slang to allow unescaped interpolation
-  HTML.unescape(render "./views/{{id.id}}.slang", "./views/layout.slang")
+  render "./views/{{id.id}}.slang", "./views/layout.slang"
 end
 
 get "/" do
