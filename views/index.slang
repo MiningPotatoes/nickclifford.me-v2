@@ -25,6 +25,8 @@ header
         a href=skill[%{link}] target="_blank"
           i class="devicon-#{skill["devicon"]} colored"
         h2= skill["name"]
+  p
+    == %{Resume available <a href="/misc/CV.pdf">here.</a>}
 
 .projects.flex-list
   h2.section-heading Projects

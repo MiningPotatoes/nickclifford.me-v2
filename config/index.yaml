@@ -35,12 +35,22 @@ projects:
     name: Pear Tutoring
     link: https://peartutoring.net/
     image: /images/PearTutoring.png
-    desc: The Uber of peer tutoring. Winner of 2016 WWT STEM Hackathon!
+    desc: The Uber of peer tutoring. Winner of 2017 WWT STEM Hackathon!
+  -
+    name: navigatAR
+    link: https://github.com/michaelgira23/navigatAR
+    image: /images/navigatAR.png
+    desc:  Finding your way through buildings and campuses through the power of augmented reality. Awarded third place at 2018 WWT STEM Hackathon!
   -
     name: Ohm
     link: https://github.com/nickbclifford/Ohm
     image: /images/Ohm.png
-    desc: An extremely concise programming language designed for <a href="https://en.wikipedia.org/wiki/Code_golf">code golf</a>.
+    desc: An extremely concise programming language designed for code golf.
+  -
+    name: Broccoli/Cauliflower
+    link: https://github.com/broccoli-lang/Broccoli
+    image: /images/broccoli.png
+    desc: An open-source reimplementation of the Broccoli language.
 
 skills:
   -
