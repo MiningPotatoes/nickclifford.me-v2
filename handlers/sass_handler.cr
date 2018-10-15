@@ -16,7 +16,7 @@ class SassHandler < Kemal::Handler
         input_path: filename,
         output_path: css_name,
         # As of right now, sass.cr doesn't allow me to create separate sourcemap files
-        source_map_embed: Kemal.config.env == "development"
+        # source_map_embed: Kemal.config.env == "development"
       )
 
       Dir.mkdir("./public/css") unless Dir.exists?("./public/css")
