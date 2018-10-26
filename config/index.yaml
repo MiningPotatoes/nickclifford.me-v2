@@ -15,12 +15,12 @@ icons:
     ETH-alt:
       link: https://etherscan.io/address/nickclifford.eth
       title: Ethereum Address (preferred)
-    LTC-alt:
-      link: https://live.blockcypher.com/ltc/address/La412SP8DBU4RJBji4hKyzWFFxCiCmMpGZ
-      title: Litecoin Address
     XMR:
       link: monero:48EqZsAL9jS7veP3YbnTvFGZhJ8VsziRjVuedUcnZuf3PrRSwBsSZEyBeXMsSN3cmoiRSqcCDmB9bPcEQmWFa1uHAGQPkDf
       title: Monero Address
+    LTC-alt:
+      link: https://live.blockcypher.com/ltc/address/La412SP8DBU4RJBji4hKyzWFFxCiCmMpGZ
+      title: Litecoin Address
     BTC-alt:
       link: https://blockchain.info/address/19k7KRhfjfRwDnndKytBRtk5vV33zWXQrA
       title: Bitcoin Address

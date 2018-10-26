@@ -1,6 +1,6 @@
 name: nickclifford.me-v2
 version: 2.0.0
-crystal: 0.24.2
+crystal: 0.26.1
 
 author:
   - Nick Clifford <nick@nickclifford.me>

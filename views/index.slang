@@ -2,8 +2,8 @@ header
   .title
     h1 Nick Clifford
     .social-icons
-      - config["icons"].each do |type, icons|
-        - icons.each do |icon, settings|
+      - config["icons"].as_h.each do |type, icons|
+        - icons.as_h.each do |icon, settings|
           a href=settings[%{link}] target="_blank" title=settings[%{title}]
             - case type
             - when "fa"
@@ -20,7 +20,7 @@ header
 .skills.flex-list
   h2.section-heading Skills and Experience
   .skills-list.flex-list__container
-    - config["skills"].each do |skill|
+    - config["skills"].as_a.each do |skill|
       .skill.flex-list__item
         a href=skill[%{link}] target="_blank"
           i class="devicon-#{skill["devicon"]} colored"
@@ -31,7 +31,7 @@ header
 .projects.flex-list
   h2.section-heading Projects
   .projects-list.flex-list__container
-    - config["projects"].each do |project|
+    - config["projects"].as_a.each do |project|
       .project.flex-list__item
         h2= project["name"]
         a href=project[%{link}] target="_blank"
