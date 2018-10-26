@@ -8,7 +8,7 @@ class SassHandler < Kemal::Handler
       css_name = "./public/css/#{File.basename(filename, ".scss")}.css"
 
       # Do not recompile if there have been no modifications to the original SCSS file since compilation
-      next if File.exists?(css_name) && File.stat(filename).mtime < File.stat(css_name).mtime
+      next if File.exists?(css_name) && File.info(filename).modification_time < File.info(css_name).modification_time
 
       css = Sass.compile_file(
         filename,
