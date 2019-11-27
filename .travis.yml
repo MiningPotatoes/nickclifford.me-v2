@@ -12,4 +12,4 @@ before_install:
   - shards install
   - make -C lib/sass dep
 script: LIBRARY_PATH="$LOCAL_LD_PATH/lib" LD_LIBRARY_PATH="$LOCAL_LD_PATH/lib" KEMAL_ENV=test crystal spec
-after_success: "[[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]] && .travis/deploy.sh"
+after_success: "[[ $TRAVIS_BRANCH == \"master\" && $TRAVIS_PULL_REQUEST == \"false\" ]] && .travis/deploy.sh"
