@@ -14,7 +14,5 @@ dependencies:
     github: jeromegn/slang
   spec-kemal:
     github: kemalcr/spec-kemal
-  sqlite3:
-    github: crystal-lang/crystal-sqlite3
 
 license: MIT

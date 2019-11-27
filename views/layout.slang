@@ -10,5 +10,3 @@ html
     == stylesheet
   body
     == content
-    - Dir.glob("./public/javascripts/polyfills/*.js") do |polyfill|
-      script src="/javascripts/polyfills/#{File.basename(polyfill)}"
