@@ -8,6 +8,7 @@ author:
 dependencies:
   kemal:
     github: kemalcr/kemal
+    branch: master
   sass:
     github: straight-shoota/sass.cr
   slang:
